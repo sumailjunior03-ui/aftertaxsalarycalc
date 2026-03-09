@@ -3,7 +3,7 @@ window.SITE_CONFIG = {
   siteName: 'AfterTaxSalaryCalc.com',
   title: 'After-Tax Salary Calculator',
   partnershipsEmail: 'partnerships@calc-hq.com',
-  buildDate: '2026-03-08',
+  buildDate: '2026-03-09',
   taxYearLabel: '2025 tax-year estimate',
   adsensePublisherId: 'ca-pub-7744853829365165',
   federalTaxData: {

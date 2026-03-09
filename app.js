@@ -93,6 +93,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     setDynamicMeta();
+    renderSiteHeader();
     renderFooter(window.SITE_CONFIG.domain);
 
     const form = document.getElementById('calculatorForm');

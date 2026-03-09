@@ -14,21 +14,42 @@ window.NETWORK_LINKS = [
 ];
 
 window.validateNetworkConfig = function validateNetworkConfig() {
-  const liveLinks = NETWORK_LINKS.filter(link => link.live);
+  const liveLinks = window.NETWORK_LINKS.filter(link => link.live);
   const uniqueUrls = new Set(liveLinks.map(link => link.url));
   if (uniqueUrls.size !== liveLinks.length) {
     throw new Error('Duplicate live links found in network.js');
   }
 };
 
+window.renderSiteHeader = function renderSiteHeader() {
+  const headerTargets = document.querySelectorAll('[data-site-header-nav]');
+  if (!headerTargets.length) {
+    return;
+  }
+
+  const navHtml = `
+    <nav class="header-nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/legal.html">Legal</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  `;
+
+  headerTargets.forEach(target => {
+    target.innerHTML = navHtml;
+  });
+};
+
 window.renderFooter = function renderFooter(currentDomain) {
-  validateNetworkConfig();
+  window.validateNetworkConfig();
   const footerTarget = document.getElementById('site-footer');
   if (!footerTarget) {
     return;
   }
 
-  const liveLinks = NETWORK_LINKS
+  const liveLinks = window.NETWORK_LINKS
     .filter(link => link.live)
     .filter(link => !link.url.includes(currentDomain));
 
