@@ -10,8 +10,7 @@ window.NETWORK_LINKS = [
   { name: 'Quarterly Tax Calc',         url: 'https://quarterlytaxcalc.com/', description: 'Estimate quarterly estimated taxes', live: true },
   { name: 'Total Comp Calc',            url: 'https://totalcompcalc.com/', description: 'Compare total job offer compensation', live: true },
   { name: 'Overtime Pay Calc',          url: 'https://overtimepaycalc.com/', description: 'Calculate overtime pay', live: true },
-  { name: 'After-Tax Salary Calc',      url: 'https://aftertaxsalarycalc.com/', description: 'Estimate after-tax take-home salary', live: true },
-  { name: 'Take-Home Pay Calc',         url: 'https://takehomepaycalc.com/', description: 'Estimate net take-home pay', live: true }
+  { name: 'After-Tax Salary Calc',      url: 'https://aftertaxsalarycalc.com/', description: 'Estimate after-tax take-home salary', live: true }
 ];
 
 window.validateNetworkConfig = function validateNetworkConfig() {
