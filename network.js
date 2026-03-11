@@ -1,17 +1,17 @@
-window.FORBIDDEN_DOMAINS = ["tokentodollarmargin.com"];
+window.FORBIDDEN_DOMAINS = ["tokentodollarmargin.com", "freelanceratecalc.com"];
 window.NETWORK_LINKS = [
-  { domain: 'calc-hq.com',             name: 'Calc HQ',               url: 'https://calc-hq.com/',               description: 'Network hub',                         live: true },
-  { domain: 'bizdaychecker.com',       name: 'BizDayChecker',         url: 'https://bizdaychecker.com/',         description: 'Business day calculator',            live: true },
-  { domain: 'bankcutoffchecker.com',   name: 'BankCutoffChecker',     url: 'https://bankcutoffchecker.com/',     description: 'Bank cutoff time checker',           live: true },
-  { domain: 'salaryvsinflation.com',   name: 'SalaryVsInflation',     url: 'https://salaryvsinflation.com/',     description: 'Does your raise beat inflation?',    live: true },
-  { domain: 'hourly2salarycalc.com',   name: 'Hourly2SalaryCalc',     url: 'https://hourly2salarycalc.com/',     description: 'Hourly rate to annual salary',       live: true },
-  { domain: 'payrolldatechecker.com',  name: 'PayrollDateChecker',    url: 'https://payrolldatechecker.com/',    description: 'Payroll processing date calculator', live: true },
-  { domain: '1099vsw2calc.com',        name: '1099vsW2Calc',          url: 'https://1099vsw2calc.com/',          description: '1099 vs W-2 comparison calculator',  live: true },
-  { domain: 'freelanceincomecalc.com', name: 'FreelanceIncomeCalc',   url: 'https://freelanceincomecalc.com/',   description: 'Freelance rate to annual income',    live: true },
-  { domain: 'quarterlytaxcalc.com',    name: 'QuarterlyTaxCalc',      url: 'https://quarterlytaxcalc.com/',      description: 'Estimate quarterly estimated taxes', live: true },
-  { domain: 'totalcompcalc.com',       name: 'TotalCompCalc',         url: 'https://totalcompcalc.com/',         description: 'Compare total job offer compensation', live: true },
-  { domain: 'overtimepaycalc.com',     name: 'OvertimePayCalc',       url: 'https://overtimepaycalc.com/',       description: 'Calculate overtime pay',             live: true },
-  { domain: 'aftertaxsalarycalc.com',  name: 'AfterTaxSalaryCalc',    url: 'https://aftertaxsalarycalc.com/',    description: 'Estimate after-tax take-home salary', live: true }
+  { domain: 'calc-hq.com',             name: 'Calc-HQ',                 url: 'https://calc-hq.com/',               description: 'Network hub',                         live: true },
+  { domain: 'bizdaychecker.com',       name: 'BizDayChecker.com',       url: 'https://bizdaychecker.com/',         description: 'Business day calculator',            live: true },
+  { domain: 'bankcutoffchecker.com',   name: 'BankCutoffChecker.com',   url: 'https://bankcutoffchecker.com/',     description: 'Bank cutoff time checker',           live: true },
+  { domain: 'salaryvsinflation.com',   name: 'SalaryVsInflation.com',   url: 'https://salaryvsinflation.com/',     description: 'Does your raise beat inflation?',    live: true },
+  { domain: 'hourly2salarycalc.com',   name: 'Hourly2SalaryCalc.com',   url: 'https://hourly2salarycalc.com/',     description: 'Hourly rate to annual salary',       live: true },
+  { domain: 'payrolldatechecker.com',  name: 'PayrollDateChecker.com',  url: 'https://payrolldatechecker.com/',    description: 'Payroll processing date calculator', live: true },
+  { domain: '1099vsw2calc.com',        name: '1099vsW2Calc.com',        url: 'https://1099vsw2calc.com/',          description: '1099 vs W-2 comparison calculator',  live: true },
+  { domain: 'freelanceincomecalc.com', name: 'FreelanceIncomeCalc.com', url: 'https://freelanceincomecalc.com/',   description: 'Freelance rate to annual income',    live: true },
+  { domain: 'quarterlytaxcalc.com',    name: 'QuarterlyTaxCalc.com',    url: 'https://quarterlytaxcalc.com/',      description: 'Estimate quarterly estimated taxes', live: true },
+  { domain: 'totalcompcalc.com',       name: 'TotalCompCalc.com',       url: 'https://totalcompcalc.com/',         description: 'Compare total job offer compensation', live: true },
+  { domain: 'overtimepaycalc.com',     name: 'OvertimePayCalc.com',     url: 'https://overtimepaycalc.com/',       description: 'Calculate overtime pay',             live: true },
+  { domain: 'aftertaxsalarycalc.com',  name: 'AfterTaxSalaryCalc.com',  url: 'https://aftertaxsalarycalc.com/',    description: 'Estimate after-tax take-home salary', live: true }
 ];
 
 (function validateNetwork() {
