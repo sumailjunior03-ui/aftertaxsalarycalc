@@ -51,18 +51,37 @@ window.renderSiteHeader = function renderSiteHeader() {
   }
 };
 
+window.CLUSTER = {
+  income:       ['hourly2salarycalc.com', 'freelanceincomecalc.com', 'totalcompcalc.com', 'aftertaxsalarycalc.com'],
+  tax:          ['1099vsw2calc.com', 'quarterlytaxcalc.com'],
+  banking:      ['bankcutoffchecker.com'],
+  businessDays: ['bizdaychecker.com', 'payrolldatechecker.com']
+};
+
 window.renderFooter = function renderFooter(currentDomain) {
   var footerTarget = document.getElementById('site-footer');
   if (!footerTarget) return;
 
   var host = String(currentDomain || '').toLowerCase();
+
+  var clusterPeers = [];
+  var clusterKeys = Object.keys(window.CLUSTER);
+  for (var c = 0; c < clusterKeys.length; c++) {
+    var peers = window.CLUSTER[clusterKeys[c]];
+    if (peers.indexOf(host) !== -1) {
+      clusterPeers = peers;
+      break;
+    }
+  }
+
   var liveLinks = [];
   for (var i = 0; i < window.NETWORK_LINKS.length; i++) {
     var link = window.NETWORK_LINKS[i];
     var domain = String(link.domain).toLowerCase();
     if (link.live !== true) continue;
     if (window.FORBIDDEN_DOMAINS.indexOf(domain) !== -1) continue;
-    if (host && domain === host) continue;
+    if (domain === host) continue;
+    if (domain !== 'calc-hq.com' && clusterPeers.length && clusterPeers.indexOf(domain) === -1) continue;
     liveLinks.push(link);
   }
 
