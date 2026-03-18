@@ -4,49 +4,53 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>After-Tax Salary Calculator | AfterTaxSalaryCalc.com</title>
-  <meta name="description" content="Estimate annual, monthly, bi-weekly, and weekly after-tax salary after U.S. federal taxes using a browser-based salary after tax calculator.">
+  <meta name="description" content="Estimate annual, monthly, bi-weekly, and weekly after-tax salary after U.S. federal taxes.">
   <link rel="canonical" href="https://aftertaxsalarycalc.com/">
-  <meta name="robots" content="index, follow" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="After-Tax Salary Calculator | AfterTaxSalaryCalc.com" />
-  <meta property="og:description" content="Estimate annual, monthly, bi-weekly, and weekly after-tax salary after U.S. federal taxes using a browser-based salary after tax calculator." />
-  <meta property="og:url" content="https://aftertaxsalarycalc.com/" />
-  <meta name="google-adsense-account" content="ca-pub-7744853829365165" />
+  <meta name="robots" content="index, follow">
+  <meta name="google-adsense-account" content="ca-pub-7744853829365165">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="After-Tax Salary Calculator | AfterTaxSalaryCalc.com">
+  <meta property="og:description" content="Estimate annual, monthly, bi-weekly, and weekly after-tax salary after U.S. federal taxes.">
+  <meta property="og:url" content="https://aftertaxsalarycalc.com/">
+  <meta property="og:site_name" content="AfterTaxSalaryCalc.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="After-Tax Salary Calculator | AfterTaxSalaryCalc.com">
+  <meta name="twitter:description" content="Estimate annual, monthly, bi-weekly, and weekly after-tax salary after U.S. federal taxes.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7744853829365165" crossorigin="anonymous"></script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "After-Tax Salary Calculator",
-    "url": "https://aftertaxsalarycalc.com/",
-    "applicationCategory": "FinanceApplication",
-    "operatingSystem": "Any",
-    "description": "Estimate annual, monthly, bi-weekly, and weekly after-tax salary after U.S. federal taxes.",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
-  }
-  </script>
   <link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "After-Tax Salary Calculator",
+  "url": "https://aftertaxsalarycalc.com/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "description": "Estimate annual, monthly, bi-weekly, and weekly after-tax salary after U.S. federal taxes.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
 </head>
 <body>
-  <header class="site-header">
+<header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="/">AfterTaxSalaryCalc.com</a>
       <div data-site-header-nav></div>
     </div>
   </header>
-
-  <main class="container">
+<main class="container">
     <section class="hero">
       <div class="breadcrumbs">Home / Calculator</div>
       <div class="hero-grid">
         <div class="card">
           <h1>After-Tax Salary Calculator</h1>
-          <p class="muted">Estimate how much salary you keep after U.S. federal income tax. The calculator can also include FICA to show a closer after-tax salary estimate. Results use a <span data-tax-year-label>2025 tax-year estimate</span> and run locally in your browser.</p>
-          <div class="ad-slot" aria-label="Advertisement placeholder">AdSense placeholder</div>
+          <p class="muted">Estimate how much salary you keep after U.S. federal taxes. The calculator can also include FICA to show a closer after-tax salary estimate. Results use a <span data-tax-year-label>2025 tax-year estimate</span> and run locally in your browser.</p>
+          <ins class="adsbygoogle ad-slot" data-ad-client="" data-ad-slot="" data-ad-format="auto" data-full-width-responsive="true" aria-label="Advertisement"></ins>
         </div>
         <div class="card">
           <h2>Calculator Tool</h2>
@@ -69,22 +73,29 @@
             </div>
             <button type="submit">Calculate after-tax salary</button>
           </form>
+          <div class="results-grid top-results">
+            <div class="result-box"><span class="result-label">Estimated federal tax</span><span id="estimatedFederalTax" class="result-value">$0.00</span></div>
+            <div class="result-box"><span class="result-label">Estimated FICA</span><span id="estimatedFica" class="result-value">$0.00</span></div>
+            <div class="result-box"><span class="result-label">Estimated after-tax annual salary</span><span id="estimatedNetAnnual" class="result-value">$0.00</span></div>
+            <div class="result-box"><span class="result-label">Estimated after-tax monthly salary</span><span id="estimatedNetMonthly" class="result-value">$0.00</span></div>
+            <div class="result-box"><span class="result-label">Estimated after-tax bi-weekly salary</span><span id="estimatedNetBiweekly" class="result-value">$0.00</span></div>
+            <div class="result-box"><span class="result-label">Estimated after-tax weekly salary</span><span id="estimatedNetWeekly" class="result-value">$0.00</span></div>
+          </div>
+          <p class="notice">Default assumption: <span id="exampleTaxYear">2025 tax-year estimate</span>. This tool does not include state taxes, retirement contributions, health insurance deductions, credits, or employer-specific withholding adjustments.</p>
         </div>
       </div>
     </section>
 
     <section>
       <div class="section-card">
-        <h2>Estimated Results</h2>
-        <div class="results-grid">
-          <div class="result-box"><span class="result-label">Estimated federal tax</span><span id="estimatedFederalTax" class="result-value">$0.00</span></div>
-          <div class="result-box"><span class="result-label">Estimated FICA</span><span id="estimatedFica" class="result-value">$0.00</span></div>
-          <div class="result-box"><span class="result-label">Estimated after-tax annual salary</span><span id="estimatedNetAnnual" class="result-value">$0.00</span></div>
-          <div class="result-box"><span class="result-label">Estimated after-tax monthly salary</span><span id="estimatedNetMonthly" class="result-value">$0.00</span></div>
-          <div class="result-box"><span class="result-label">Estimated after-tax bi-weekly salary</span><span id="estimatedNetBiweekly" class="result-value">$0.00</span></div>
-          <div class="result-box"><span class="result-label">Estimated after-tax weekly salary</span><span id="estimatedNetWeekly" class="result-value">$0.00</span></div>
-        </div>
-        <p class="notice">Default assumption: <span id="exampleTaxYear">2025 tax-year estimate</span>. This tool does not include state taxes, retirement contributions, health insurance deductions, credits, or employer-specific withholding adjustments.</p>
+        <h2>When This Calculator Is Useful</h2>
+        <p>This calculator is useful when you want a quick estimate of how much gross salary you may keep after U.S. federal taxes. It is helpful for comparing job offers, checking the real effect of a raise, and estimating monthly take-home pay before building a budget.</p>
+        <ul class="list-tight">
+          <li>Reviewing a salary offer before accepting a job.</li>
+          <li>Estimating whether a raise changes monthly cash flow in a meaningful way.</li>
+          <li>Comparing gross salary to after-tax salary for budgeting decisions.</li>
+          <li>Getting a federal-only planning estimate before using a more detailed payroll tool.</li>
+        </ul>
       </div>
     </section>
 
@@ -135,6 +146,23 @@
 
     <section>
       <div class="section-card">
+        <h2>Example Scenarios</h2>
+        <p><strong>Scenario 1:</strong> A worker comparing an $85,000 offer can use the calculator to estimate what the salary may look like after federal tax and FICA instead of relying on the gross number alone.</p>
+        <p><strong>Scenario 2:</strong> Someone receiving a raise from $72,000 to $78,000 can check how much the after-tax monthly amount may change before adjusting rent, savings, or debt payments.</p>
+        <p><strong>Scenario 3:</strong> A household comparing filing statuses for planning discussions can test a salary amount under different assumptions to see how federal-only estimates shift.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-card">
+        <h2>Understanding After-Tax Salary Estimates</h2>
+        <p>Gross salary and after-tax salary are not the same thing. A compensation figure shown in a job offer or raise discussion is usually the gross amount before federal tax, Social Security, and Medicare are considered. That is why a salary can look comfortable on paper but feel smaller once you translate it into the amount that actually reaches your bank account.</p>
+        <p>This calculator keeps the estimate intentionally narrow. It focuses on U.S. federal income tax and optional FICA so the output stays deterministic and easy to understand. State income taxes, pre-tax deductions, health insurance premiums, retirement contributions, tax credits, and employer-specific withholding choices can all move real paycheck amounts away from the estimate. The purpose of the tool is not to mimic payroll software line by line. The purpose is to provide a fast planning estimate that gives users a cleaner picture of what gross salary may become after core federal taxes.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-card">
         <h2>Common Scenarios</h2>
         <ul class="list-tight">
           <li>Checking whether a salary offer still works after federal taxes.</li>
@@ -165,13 +193,13 @@
       </div>
     </section>
   </main>
-
-  <footer class="site-footer">
+<footer class="site-footer">
     <div class="container" id="site-footer"></div>
   </footer>
-
-  <script src="config.js"></script>
-  <script src="network.js"></script>
-  <script src="app.js"></script>
+  <script src="/assets/config.js"></script>
+  <script src="/assets/network.js"></script>
+  <script src="/assets/footer.js"></script>
+  <script src="/assets/ads.js"></script>
+  <script src="/assets/app.js"></script>
 </body>
 </html>
