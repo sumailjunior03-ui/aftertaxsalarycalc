@@ -8,9 +8,9 @@ window.SITE_CONFIG = {
   adsensePublisherId: 'ca-pub-7744853829365165',
   federalTaxData: {
     standardDeduction: {
-      single: 15000,
-      married: 30000,
-      hoh: 22500
+      single: 15750,
+      married: 31500,
+      hoh: 25000
     },
     brackets: {
       single: [
