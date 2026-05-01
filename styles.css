@@ -21,7 +21,7 @@ body {
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 .container {
-  width: min(1080px, calc(100% - 32px));
+  width: min(800px, calc(100% - 32px));
   margin: 0 auto;
 }
 .site-header {
@@ -234,4 +234,55 @@ button:hover { background: #184d9c; }
 @media (max-width: 860px) {
   .hero-grid, .footer-grid, .results-grid { grid-template-columns: 1fr; }
   .header-inner { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+}
+
+/* ── AD COLLAPSE ── */
+.adsense-unit { min-height: 0; height: 0; overflow: hidden; }
+.adsense-unit ins, .adsense-unit iframe { height: 0 !important; max-height: 0 !important; }
+.adsense-unit.active { min-height: 250px; height: auto; overflow: visible; }
+.adsense-unit.active ins, .adsense-unit.active iframe { height: auto !important; max-height: none !important; }
+.ad-slot { min-height: 0; }
+
+/* ── PAGE COPY ── */
+.page-copy { max-width: 800px; margin: 0 auto; }
+.page-copy h1 { margin-bottom: 16px; }
+.page-copy h2 { margin-top: 24px; margin-bottom: 8px; }
+.page-copy p { margin-bottom: 12px; }
+
+/* ── NETWORK FOOTER ── */
+.footer-nav-links { list-style: none; padding: 0; margin: 0; }
+.footer-nav-links li { margin-bottom: 6px; }
+.footer-nav-links a { color: var(--primary); text-decoration: none; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 16px; padding: 20px 0; }
+.footer-links a { color: var(--primary); text-decoration: none; }
+.footer-meta { color: var(--muted); font-size: 0.85rem; padding: 16px 0; border-top: 1px solid var(--border); margin-top: 8px; }
+.footer-empty { color: var(--muted); }
+.header-nav { display: flex; gap: 16px; flex-wrap: wrap; }
+.header-nav a { color: var(--primary); text-decoration: none; font-size: 0.95rem; }
+.header-nav a:hover { text-decoration: underline; }
+.header-nav a.active { font-weight: 700; }
+
+/* ── MOBILE FIXES ── */
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .brand {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    margin: 0 0 8px 0;
+    line-height: 1.2;
+  }
+  .header-nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px 14px;
+    font-size: 14px;
+  }
+  .page-copy { padding: 0 8px; }
+  body { padding-bottom: env(safe-area-inset-bottom, 0); overflow-x: hidden; }
 }

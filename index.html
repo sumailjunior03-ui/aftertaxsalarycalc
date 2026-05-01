@@ -18,7 +18,7 @@
   <meta name="twitter:description" content="Estimate annual, monthly, bi-weekly, and weekly after-tax salary after U.S. federal taxes.">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7744853829365165" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=layout-repair-0501">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -88,108 +88,144 @@
 
     <section>
       <div class="section-card">
-        <h2>When This Calculator Is Useful</h2>
-        <p>This calculator is useful when you want a quick estimate of how much gross salary you may keep after U.S. federal taxes. It is helpful for comparing job offers, checking the real effect of a raise, and estimating monthly take-home pay before building a budget.</p>
-        <ul class="list-tight">
-          <li>Reviewing a salary offer before accepting a job.</li>
-          <li>Estimating whether a raise changes monthly cash flow in a meaningful way.</li>
-          <li>Comparing gross salary to after-tax salary for budgeting decisions.</li>
-          <li>Getting a federal-only planning estimate before using a more detailed payroll tool.</li>
-        </ul>
+        <h2>What This Calculator Gives You</h2>
+        <p>You just got a job offer for $85,000 a year. That sounds great — until your first paycheck shows up and it's nowhere near $7,083 a month. This calculator tells you what you actually keep after federal income tax and FICA, broken down by week, month, and paycheck period.</p>
+        <p>Enter your gross salary and filing status, and you'll see your after-tax income across every timeframe. No state taxes, no deductions beyond the standard deduction, no retirement contributions — just the federal number that lets you compare job offers, evaluate a raise, or figure out whether that salary can cover your rent.</p>
       </div>
     </section>
 
     <section>
       <div class="section-card">
-        <h2>What This Calculator Does</h2>
-        <p>This calculator estimates how much salary you keep after U.S. federal taxes. It applies the standard deduction for the selected filing status, estimates federal income tax using progressive tax brackets, and optionally estimates Social Security and Medicare taxes.</p>
-        <p>The result is an estimated annual net figure plus monthly, bi-weekly, and weekly after-tax salary. It is designed for fast planning, job comparison, and salary reality checks rather than payroll processing.</p>
+        <h2>Gross Salary vs After-Tax Salary</h2>
+        <p>Gross salary is the number on your offer letter. After-tax salary is the number that hits your bank account. The gap between them is federal income tax plus FICA (Social Security and Medicare).</p>
+        <p>At $85,000 with single filing status, the standard deduction drops your taxable income to $69,250. Federal income tax on that amount is roughly $10,525. FICA adds another $6,503. Your after-tax salary: $67,972 — about 80% of the gross figure. That 20% gap is the real cost of being an employee.</p>
+        <p>The gap widens as income rises. At $150,000, you're keeping roughly 75%. At $300,000, it's closer to 71% once the Additional Medicare Tax kicks in above $200,000.</p>
       </div>
     </section>
 
     <section>
       <div class="section-card">
-        <h2>Example Calculation</h2>
+        <h2>Example Calculation: $85,000, Single Filer</h2>
         <table class="example-table">
-          <tr><th>Input</th><th>Example</th></tr>
-          <tr><td>Annual salary</td><td>$85,000</td></tr>
-          <tr><td>Filing status</td><td>Single</td></tr>
-          <tr><td>Standard deduction used</td><td>$15,000</td></tr>
-          <tr><td>Taxable income</td><td>$70,000</td></tr>
-          <tr><td>Estimated federal income tax</td><td>Calculated progressively across brackets</td></tr>
-          <tr><td>Estimated FICA</td><td>6.2% Social Security up to the wage base plus 1.45% Medicare</td></tr>
-          <tr><td>Output</td><td>Estimated annual and per-pay-period after-tax salary</td></tr>
+          <tr><th>Step</th><th>Calculation</th><th>Amount</th></tr>
+          <tr><td>Gross salary</td><td></td><td>$85,000</td></tr>
+          <tr><td>Standard deduction (single, 2025)</td><td></td><td>−$15,750</td></tr>
+          <tr><td>Taxable income</td><td>$85,000 − $15,750</td><td>$69,250</td></tr>
+          <tr><td>Federal income tax</td><td>Progressive brackets</td><td>$10,525</td></tr>
+          <tr><td>Social Security tax (6.2%)</td><td>$85,000 × 6.2% (cap: $176,100)</td><td>$5,270</td></tr>
+          <tr><td>Medicare tax (1.45%)</td><td>$85,000 × 1.45%</td><td>$1,233</td></tr>
+          <tr><td><strong>Total federal tax</strong></td><td>$10,525 + $5,270 + $1,233</td><td><strong>$17,028</strong></td></tr>
+          <tr><td><strong>After-tax annual salary</strong></td><td>$85,000 − $17,028</td><td><strong>$67,972</strong></td></tr>
+          <tr><td>After-tax monthly</td><td>$67,972 ÷ 12</td><td>$5,664</td></tr>
+          <tr><td>After-tax bi-weekly</td><td>$67,972 ÷ 26</td><td>$2,614</td></tr>
+          <tr><td>After-tax weekly</td><td>$67,972 ÷ 52</td><td>$1,307</td></tr>
         </table>
       </div>
     </section>
 
     <section>
       <div class="section-card">
-        <h2>Formula</h2>
-        <p><strong>Taxable Income</strong> = Gross Salary − Standard Deduction</p>
-        <p><strong>Federal Income Tax</strong> = Sum of each tax bracket slice × its tax rate</p>
-        <p><strong>FICA</strong> = Social Security Tax + Medicare Tax</p>
-        <p><strong>After-Tax Annual Salary</strong> = Gross Salary − Federal Income Tax − FICA</p>
-        <p><strong>After-Tax Monthly Salary</strong> = After-Tax Annual Salary ÷ 12</p>
-        <p><strong>After-Tax Bi-Weekly Salary</strong> = After-Tax Annual Salary ÷ 26</p>
-        <p><strong>After-Tax Weekly Salary</strong> = After-Tax Annual Salary ÷ 52</p>
+        <h2>How Federal Income Tax Affects Your Salary</h2>
+        <p>The U.S. uses progressive brackets — not a flat rate. Your first $11,925 of taxable income is taxed at 10%, the next chunk at 12%, then 22%, and so on. This means a raise doesn't push your entire salary into a higher bracket — only the dollars above each threshold get the higher rate.</p>
+        <p>At $85,000 gross (single, standard deduction), your $69,250 in taxable income crosses three brackets: 10% on the first $11,925, 12% up to $48,475, and 22% on the remainder. The effective rate works out to about 15.2% — far below the 22% marginal rate.</p>
+        <p>Filing status changes the math significantly. Married filing jointly gets a $31,500 standard deduction and wider bracket thresholds. A married couple earning $85,000 jointly would pay roughly $2,500 less in federal income tax than a single filer at the same salary.</p>
       </div>
     </section>
 
     <section>
       <div class="section-card">
-        <h2>Calculation Methodology</h2>
-        <p>This calculator uses a deterministic federal-tax estimate flow. First, it applies the standard deduction tied to the selected filing status. Next, it calculates taxable income and applies progressive U.S. federal tax brackets to estimate federal income tax. If the FICA option is enabled, it also estimates Social Security tax up to the annual wage base and Medicare tax on wages.</p>
-        <p>Total estimated taxes are then subtracted from gross salary to produce estimated net annual pay. That net figure is converted into monthly, bi-weekly, and weekly estimates. All calculations run locally in the browser and no personal data is collected or stored.</p>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-card">
-        <h2>Example Scenarios</h2>
-        <p><strong>Scenario 1:</strong> A worker comparing an $85,000 offer can use the calculator to estimate what the salary may look like after federal tax and FICA instead of relying on the gross number alone.</p>
-        <p><strong>Scenario 2:</strong> Someone receiving a raise from $72,000 to $78,000 can check how much the after-tax monthly amount may change before adjusting rent, savings, or debt payments.</p>
-        <p><strong>Scenario 3:</strong> A household comparing filing statuses for planning discussions can test a salary amount under different assumptions to see how federal-only estimates shift.</p>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-card">
-        <h2>Understanding After-Tax Salary Estimates</h2>
-        <p>Gross salary and after-tax salary are not the same thing. A compensation figure shown in a job offer or raise discussion is usually the gross amount before federal tax, Social Security, and Medicare are considered. That is why a salary can look comfortable on paper but feel smaller once you translate it into the amount that actually reaches your bank account.</p>
-        <p>This calculator keeps the estimate intentionally narrow. It focuses on U.S. federal income tax and optional FICA so the output stays deterministic and easy to understand. State income taxes, pre-tax deductions, health insurance premiums, retirement contributions, tax credits, and employer-specific withholding choices can all move real paycheck amounts away from the estimate. The purpose of the tool is not to mimic payroll software line by line. The purpose is to provide a fast planning estimate that gives users a cleaner picture of what gross salary may become after core federal taxes.</p>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-card">
-        <h2>Common Scenarios</h2>
-        <ul class="list-tight">
-          <li>Checking whether a salary offer still works after federal taxes.</li>
-          <li>Comparing two jobs with different gross salaries.</li>
-          <li>Estimating monthly after-tax salary before signing a lease or budgeting fixed bills.</li>
-          <li>Planning around a raise to see the difference in after-tax salary instead of just gross pay.</li>
+        <h2>How FICA Changes the Number</h2>
+        <p>FICA is the payroll tax that funds Social Security and Medicare. Unlike income tax, it applies to your gross salary — not taxable income — and there's no standard deduction to reduce it.</p>
+        <ul>
+          <li><strong>Social Security (6.2%)</strong> applies up to $176,100 in 2025. Earn more than that, and the SS portion stops. At $85,000, you pay $5,270. At $200,000, you still only pay $10,918 on the first $176,100.</li>
+          <li><strong>Medicare (1.45%)</strong> has no cap. It applies to every dollar earned.</li>
+          <li><strong>Additional Medicare Tax (0.9%)</strong> kicks in above $200,000 for single filers ($250,000 for married filing jointly). This is the surtax that high earners often overlook.</li>
         </ul>
+        <p>At $85,000, FICA totals $6,503 — about 7.6% of gross salary. At $250,000, FICA rises to roughly $12,845 (5.1% effective), because Social Security has already maxed out but Medicare and the surtax continue climbing.</p>
+        <p>Your employer pays a matching FICA amount, but that doesn't come out of your paycheck — it's an additional cost to the company on top of your gross salary.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-card">
+        <h2>After-Tax Salary vs Net Pay</h2>
+        <p>These terms get used interchangeably, but they're not the same thing.</p>
+        <p><strong>After-tax salary</strong> is gross salary minus federal income tax and FICA. That's what this calculator shows.</p>
+        <p><strong>Net pay</strong> (or take-home pay) is what actually appears in your bank account after everything is subtracted: federal tax, FICA, state income tax, health insurance premiums, retirement contributions (401k, IRA), union dues, garnishments, and any other deductions your employer processes.</p>
+        <p>This calculator deliberately stops at the federal level. It gives you a clean baseline for comparing salaries across states or job offers without the noise of variable deductions. If you need the full take-home number including state tax and benefits, you'd need a paycheck calculator that models every deduction line.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-card">
+        <h2>Real-World Scenarios</h2>
+        <ul>
+          <li><strong>Comparing two job offers.</strong> Offer A: $80,000 in Texas (no state income tax). Offer B: $90,000 in California (13.3% top rate). After federal tax alone, Offer B nets about $71,890 and Offer A nets about $63,973. But once California state tax takes roughly $7,800, Offer B drops to roughly $64,090 — almost identical to Offer A. This calculator gives you the federal baseline; state tax is the variable that tips the scale.</li>
+          <li><strong>Evaluating a raise.</strong> You earn $75,000 and get a 10% raise to $82,500. After federal tax and FICA, your after-tax income goes from roughly $60,092 to $65,757 — a $5,665 gain, not the $7,500 the raise implies. The effective raise is 9.4%, not 10%, because the extra income falls into the 22% bracket.</li>
+          <li><strong>Budgeting for a career change.</strong> A freelancer earning $95,000 on 1099 income considers a W-2 job at $85,000. This calculator shows the W-2 after-tax salary as $67,972. But as a freelancer, you pay both halves of FICA (15.3% on 92.35% of profit) — roughly $13,433 vs $6,503 in employee FICA. The W-2 job has a lower gross but the employer covers half the payroll tax. Run the full comparison at <a href="https://1099vsw2calc.com" target="_blank" rel="noopener">1099vsW2Calc.com</a>.</li>
+          <li><strong>Married filing jointly at $130,000.</strong> A couple with one earner at $130,000 gets a $31,500 standard deduction and wider brackets. Federal income tax: roughly $13,875. FICA: $9,945. After-tax: $106,180. The same $130,000 as a single filer nets about $99,017 — over $7,000 less.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-card">
+        <h2>How to Use These Numbers</h2>
+        <p>Each timeframe answers a different question:</p>
+        <ul>
+          <li><strong>Annual</strong> — compare total compensation across job offers or years</li>
+          <li><strong>Monthly</strong> — match against rent, car payments, and fixed bills</li>
+          <li><strong>Bi-weekly</strong> — aligns with most payroll schedules (26 pay periods per year)</li>
+          <li><strong>Weekly</strong> — useful for hourly workers or irregular schedules</li>
+        </ul>
+        <p>The bi-weekly figure assumes 26 pay periods. Some years have 27, which can make one paycheck feel like a bonus. If your employer pays semi-monthly (24 periods), divide the annual figure by 24 instead.</p>
+        <p>These numbers are federal-only. To get actual take-home pay, subtract state income tax, health insurance premiums, and retirement contributions from the after-tax salary shown here.</p>
       </div>
     </section>
 
     <section>
       <div class="section-card">
         <h2>FAQ</h2>
-        <table class="faq-table">
-          <tr><th>Question</th><th>Answer</th></tr>
-          <tr><td>Does this include state tax?</td><td>No. This version focuses on estimated U.S. federal income tax and optional FICA only.</td></tr>
-          <tr><td>Is this payroll-accurate?</td><td>No. It is an estimate for planning purposes and does not include payroll deductions, credits, or employer-specific withholding settings.</td></tr>
-          <tr><td>Can I use this to compare job offers?</td><td>Yes. It is useful for comparing gross salary to estimated after-tax salary across offers.</td></tr>
-          <tr><td>Why does my paycheck differ from the estimate?</td><td>Actual pay can differ because of state taxes, benefits, retirement contributions, bonuses, pre-tax deductions, and withholding elections.</td></tr>
-        </table>
+        <h3>Does this include state tax?</h3>
+        <p>No. This calculator focuses on U.S. federal income tax and optional FICA only. State rates range from 0% (Texas, Florida) to 13.3% (California).</p>
+        <h3>Is this payroll-accurate?</h3>
+        <p>No. It's a planning estimate — it doesn't include payroll deductions, credits, or employer-specific withholding settings.</p>
+        <h3>Can I use this to compare job offers?</h3>
+        <p>Yes. It's built for comparing gross salary to estimated after-tax salary across offers, especially in different states.</p>
+        <h3>Why does my paycheck differ from the estimate?</h3>
+        <p>Actual pay can differ because of state taxes, benefits, retirement contributions, bonuses, pre-tax deductions, and withholding elections.</p>
+        <h3>What's the difference between after-tax salary and net pay?</h3>
+        <p>After-tax salary is gross minus federal tax and FICA. Net pay also subtracts state tax, insurance premiums, retirement contributions, and other deductions. This calculator shows after-tax salary only.</p>
       </div>
     </section>
 
     <section>
       <div class="section-card">
-        <h2>Related Calculators</h2>
-        <p>Use the footer below to move to related live tools in the network.</p>
+        <h2>Data Sources</h2>
+        <ul>
+          <li><strong>Federal income tax brackets:</strong> IRS Revenue Procedure, 2025 tax year</li>
+          <li><strong>Standard deduction:</strong> $15,750 (single), $31,500 (married filing jointly), $25,000 (head of household) — IRS, 2025</li>
+          <li><strong>Social Security tax rate:</strong> 6.2% (employee), wage base $176,100 (2025) — SSA</li>
+          <li><strong>Medicare tax rate:</strong> 1.45% (employee), no cap — IRC §3101(b)</li>
+          <li><strong>Additional Medicare Tax:</strong> 0.9% above $200,000 (single) / $250,000 (MFJ) — IRC §3101(b)(2)</li>
+          <li><strong>Progressive bracket structure:</strong> IRC §1</li>
+          <li><strong>Filing status definitions:</strong> IRC §7703</li>
+        </ul>
+        <p>These are 2025 federal values and may change after tax law or inflation adjustments.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-card">
+        <h2>Limitations</h2>
+        <p><strong>Federal tax only.</strong> No state or local income tax. State rates range from 0% (Texas, Florida, Washington) to 13.3% (California). This gap can swing take-home pay by thousands.</p>
+        <p><strong>Standard deduction only.</strong> No itemized deductions, no Schedule A. If you have significant mortgage interest, charitable contributions, or state/local tax deductions, your actual federal tax may be lower.</p>
+        <p><strong>No tax credits.</strong> Child Tax Credit, Earned Income Credit, education credits, and other credits that reduce your actual tax bill are not modeled.</p>
+        <p><strong>No retirement contributions.</strong> 401(k), traditional IRA, and HSA contributions reduce taxable income dollar-for-dollar. Not included here.</p>
+        <p><strong>No pre-tax deductions.</strong> Health insurance premiums, flexible spending accounts (FSAs), and commuter benefits all reduce taxable income before federal tax is calculated. Not modeled.</p>
+        <p><strong>FICA only (employee side).</strong> This calculator shows the employee's 6.2% + 1.45%. Self-employed individuals pay both halves (15.3% on 92.35% of net earnings) — use QuarterlyTaxCalc.com for that.</p>
+        <p><strong>Not a paycheck calculator.</strong> Actual take-home pay includes state tax, benefit deductions, and garnishments that this tool doesn't model. Use this for federal planning and salary comparison, not for predicting your bank deposit.</p>
+        <p><strong>Not tax advice.</strong> Planning estimate only. Consult a tax professional for filing decisions.</p>
       </div>
     </section>
   </main>
@@ -198,7 +234,6 @@
   </footer>
   <script src="/assets/config.js"></script>
   <script src="/assets/network.js"></script>
-  <script src="/assets/footer.js"></script>
   <script src="/assets/ads.js"></script>
   <script src="/assets/app.js"></script>
 </body>
