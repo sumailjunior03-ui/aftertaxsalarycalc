@@ -44,7 +44,9 @@ window.SITE_CONFIG = {
     fica: {
       socialSecurityRate: 0.062,
       socialSecurityWageBase: 176100,
-      medicareRate: 0.0145
+      medicareRate: 0.0145,
+      additionalMedicareRate: 0.009,
+      additionalMedicareThreshold: 200000
     }
   }
 };

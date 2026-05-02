@@ -37,11 +37,12 @@
   }
 
   function computeFica(grossSalary, enabled) {
-    if (!enabled) return 0;
-    const { socialSecurityRate, socialSecurityWageBase, medicareRate } = window.SITE_CONFIG.federalTaxData.fica;
-    const socialSecurityTax = Math.min(grossSalary, socialSecurityWageBase) * socialSecurityRate;
-    const medicareTax = grossSalary * medicareRate;
-    return socialSecurityTax + medicareTax;
+    if (!enabled) return { ss: 0, med: 0, addMed: 0, total: 0 };
+    const { socialSecurityRate, socialSecurityWageBase, medicareRate, additionalMedicareRate, additionalMedicareThreshold } = window.SITE_CONFIG.federalTaxData.fica;
+    const ss = Math.min(grossSalary, socialSecurityWageBase) * socialSecurityRate;
+    const med = grossSalary * medicareRate;
+    const addMed = grossSalary > additionalMedicareThreshold ? (grossSalary - additionalMedicareThreshold) * additionalMedicareRate : 0;
+    return { ss, med, addMed, total: ss + med + addMed };
   }
 
   function updateResults() {
@@ -53,12 +54,16 @@
     const brackets = window.SITE_CONFIG.federalTaxData.brackets[filingStatus];
     const taxableIncome = Math.max(0, grossSalary - deduction);
     const federalTax = computeProgressiveTax(taxableIncome, brackets);
-    const ficaTax = computeFica(grossSalary, includeFica);
+    const fica = computeFica(grossSalary, includeFica);
+    const ficaTax = fica.total;
     const totalTax = federalTax + ficaTax;
     const netAnnual = Math.max(0, grossSalary - totalTax);
 
     const values = {
       estimatedFederalTax: federalTax,
+      estimatedSocialSecurity: fica.ss,
+      estimatedMedicare: fica.med,
+      estimatedAdditionalMedicare: fica.addMed,
       estimatedFica: ficaTax,
       estimatedNetAnnual: netAnnual,
       estimatedNetMonthly: netAnnual / 12,
