@@ -50,7 +50,7 @@
       <div class="hero-grid">
         <div class="card">
           <h1>After-Tax Salary Calculator</h1>
-          <p class="muted">Estimate how much salary you keep after U.S. federal taxes. The calculator can also include FICA to show a closer after-tax salary estimate. Results use a <span data-tax-year-label>2025 tax-year estimate</span> and run locally in your browser.</p>
+          <p class="muted">Estimate how much salary you keep after U.S. federal taxes. The calculator can also include FICA to show a closer after-tax salary estimate. Results use a <span data-tax-year-label>2026 tax-year estimate</span> and run locally in your browser.</p>
           <ins class="adsbygoogle ad-slot" data-ad-client="" data-ad-slot="" data-ad-format="auto" data-full-width-responsive="true" aria-label="Advertisement"></ins>
         </div>
         <div class="card">
@@ -85,7 +85,7 @@
             <div class="result-box"><span class="result-label">Estimated after-tax bi-weekly salary</span><span id="estimatedNetBiweekly" class="result-value">$0.00</span></div>
             <div class="result-box"><span class="result-label">Estimated after-tax weekly salary</span><span id="estimatedNetWeekly" class="result-value">$0.00</span></div>
           </div>
-          <p class="notice">Default assumption: <span id="exampleTaxYear">2025 tax-year estimate</span>. This tool does not include state taxes, retirement contributions, health insurance deductions, credits, or employer-specific withholding adjustments.</p>
+          <p class="notice">Default assumption: <span id="exampleTaxYear">2026 tax-year estimate</span>. This tool does not include state taxes, retirement contributions, health insurance deductions, credits, or employer-specific withholding adjustments.</p>
         </div>
       </div>
     </section>
@@ -102,7 +102,7 @@
       <div class="section-card">
         <h2>Where the Missing Paycheck Money Goes</h2>
         <p>Gross salary is the number on your offer letter. After-tax salary is the number that hits your bank account. The gap between them is federal income tax plus FICA (Social Security and Medicare).</p>
-        <p>At $85,000 with single filing status, the standard deduction drops your taxable income to $69,250. Federal income tax on that amount is roughly $10,525. FICA adds another $6,503. Your after-tax salary: $67,972 — about 80% of the gross figure. That 20% gap is the real cost of being an employee.</p>
+        <p>At $85,000 with single filing status, the standard deduction drops your taxable income to $68,900. Federal income tax on that amount is roughly $9,870. FICA adds another $6,503. Your after-tax salary: $68,628 — about 81% of the gross figure. That 19% gap is the real cost of being an employee.</p>
         <p>The gap widens as income rises. At $150,000, you're keeping roughly 75%. At $300,000, it's closer to 71% once the Additional Medicare Tax kicks in above $200,000.</p>
       </div>
     </section>
@@ -113,16 +113,16 @@
         <table class="example-table">
           <tr><th>Step</th><th>Calculation</th><th>Amount</th></tr>
           <tr><td>Gross salary</td><td></td><td>$85,000</td></tr>
-          <tr><td>Standard deduction (single, 2025)</td><td></td><td>−$15,750</td></tr>
-          <tr><td>Taxable income</td><td>$85,000 − $15,750</td><td>$69,250</td></tr>
-          <tr><td>Federal income tax</td><td>Progressive brackets</td><td>$10,525</td></tr>
-          <tr><td>Social Security tax (6.2%)</td><td>$85,000 × 6.2% (cap: $176,100)</td><td>$5,270</td></tr>
+          <tr><td>Standard deduction (single, 2026)</td><td></td><td>−$16,100</td></tr>
+          <tr><td>Taxable income</td><td>$85,000 − $16,100</td><td>$68,900</td></tr>
+          <tr><td>Federal income tax</td><td>Progressive brackets</td><td>$9,870</td></tr>
+          <tr><td>Social Security tax (6.2%)</td><td>$85,000 × 6.2% (cap: $184,500)</td><td>$5,270</td></tr>
           <tr><td>Medicare tax (1.45%)</td><td>$85,000 × 1.45%</td><td>$1,233</td></tr>
-          <tr><td><strong>Total federal tax</strong></td><td>$10,525 + $5,270 + $1,233</td><td><strong>$17,028</strong></td></tr>
-          <tr><td><strong>After-tax annual salary</strong></td><td>$85,000 − $17,028</td><td><strong>$67,972</strong></td></tr>
-          <tr><td>After-tax monthly</td><td>$67,972 ÷ 12</td><td>$5,664</td></tr>
-          <tr><td>After-tax bi-weekly</td><td>$67,972 ÷ 26</td><td>$2,614</td></tr>
-          <tr><td>After-tax weekly</td><td>$67,972 ÷ 52</td><td>$1,307</td></tr>
+          <tr><td><strong>Total federal tax</strong></td><td>$9,870 + $5,270 + $1,233</td><td><strong>$16,373</strong></td></tr>
+          <tr><td><strong>After-tax annual salary</strong></td><td>$85,000 − $16,373</td><td><strong>$68,628</strong></td></tr>
+          <tr><td>After-tax monthly</td><td>$68,628 ÷ 12</td><td>$5,664</td></tr>
+          <tr><td>After-tax bi-weekly</td><td>$68,628 ÷ 26</td><td>$2,614</td></tr>
+          <tr><td>After-tax weekly</td><td>$68,628 ÷ 52</td><td>$1,307</td></tr>
         </table>
       </div>
     </section>
@@ -131,8 +131,8 @@
       <div class="section-card">
         <h2>How Federal Income Tax Affects Your Salary</h2>
         <p>The U.S. uses progressive brackets — not a flat rate. Your first $11,925 of taxable income is taxed at 10%, the next chunk at 12%, then 22%, and so on. This means a raise doesn't push your entire salary into a higher bracket — only the dollars above each threshold get the higher rate.</p>
-        <p>At $85,000 gross (single, standard deduction), your $69,250 in taxable income crosses three brackets: 10% on the first $11,925, 12% up to $48,475, and 22% on the remainder. The effective rate works out to about 15.2% — far below the 22% marginal rate.</p>
-        <p>Filing status changes the math significantly. Married filing jointly gets a $31,500 standard deduction and wider bracket thresholds. A married couple earning $85,000 jointly would pay roughly $2,500 less in federal income tax than a single filer at the same salary.</p>
+        <p>At $85,000 gross (single, standard deduction), your $68,900 in taxable income crosses three brackets: 10% on the first $12,400, 12% up to $50,400, and 22% on the remainder. The effective rate works out to about 15.2% — far below the 22% marginal rate.</p>
+        <p>Filing status changes the math significantly. Married filing jointly gets a $32,200 standard deduction and wider bracket thresholds. A married couple earning $85,000 jointly would pay roughly $2,500 less in federal income tax than a single filer at the same salary.</p>
       </div>
     </section>
 
@@ -141,7 +141,7 @@
         <h2>How FICA Changes the Number</h2>
         <p>FICA is the payroll tax that funds Social Security and Medicare. Unlike income tax, it applies to your gross salary — not taxable income — and there's no standard deduction to reduce it.</p>
         <ul>
-          <li><strong>Social Security (6.2%)</strong> applies up to $176,100 in 2025. Earn more than that, and the SS portion stops. At $85,000, you pay $5,270. At $200,000, you still only pay $10,918 on the first $176,100.</li>
+          <li><strong>Social Security (6.2%)</strong> applies up to $184,500 in 2026. Earn more than that, and the SS portion stops. At $85,000, you pay $5,270. At $200,000, you still only pay $11,439 on the first $184,500.</li>
           <li><strong>Medicare (1.45%)</strong> has no cap. It applies to every dollar earned.</li>
           <li><strong>Additional Medicare Tax (0.9%)</strong> kicks in above $200,000 for single filers ($250,000 for married filing jointly). This is the surtax that high earners often overlook.</li>
         </ul>
@@ -166,8 +166,8 @@
         <ul>
           <li><strong>Comparing two job offers.</strong> Offer A: $80,000 in Texas (no state income tax). Offer B: $90,000 in California (13.3% top rate). After federal tax alone, Offer B nets about $71,890 and Offer A nets about $63,973. But once California state tax takes roughly $7,800, Offer B drops to roughly $64,090 — almost identical to Offer A. This calculator gives you the federal baseline; state tax is the variable that tips the scale.</li>
           <li><strong>Evaluating a raise.</strong> You earn $75,000 and get a 10% raise to $82,500. After federal tax and FICA, your after-tax income goes from roughly $60,092 to $65,757 — a $5,665 gain, not the $7,500 the raise implies. The effective raise is 9.4%, not 10%, because the extra income falls into the 22% bracket.</li>
-          <li><strong>Budgeting for a career change.</strong> A freelancer earning $95,000 on 1099 income considers a W-2 job at $85,000. This calculator shows the W-2 after-tax salary as $67,972. But as a freelancer, you pay both halves of FICA (15.3% on 92.35% of profit) — roughly $13,433 vs $6,503 in employee FICA. The W-2 job has a lower gross but the employer covers half the payroll tax. Run the full comparison at <a href="https://1099vsw2calc.com" target="_blank" rel="noopener">1099vsW2Calc.com</a>.</li>
-          <li><strong>Married filing jointly at $130,000.</strong> A couple with one earner at $130,000 gets a $31,500 standard deduction and wider brackets. Federal income tax: roughly $13,875. FICA: $9,945. After-tax: $106,180. The same $130,000 as a single filer nets about $99,017 — over $7,000 less.</li>
+          <li><strong>Budgeting for a career change.</strong> A freelancer earning $95,000 on 1099 income considers a W-2 job at $85,000. This calculator shows the W-2 after-tax salary as $68,628. But as a freelancer, you pay both halves of FICA (15.3% on 92.35% of profit) — roughly $13,433 vs $6,503 in employee FICA. The W-2 job has a lower gross but the employer covers half the payroll tax. Run the full comparison at <a href="https://1099vsw2calc.com" target="_blank" rel="noopener">1099vsW2Calc.com</a>.</li>
+          <li><strong>Married filing jointly at $130,000.</strong> A couple with one earner at $130,000 gets a $32,200 standard deduction and wider brackets. Federal income tax: roughly $13,875. FICA: $9,945. After-tax: $106,180. The same $130,000 as a single filer nets about $99,017 — over $7,000 less.</li>
         </ul>
       </div>
     </section>
@@ -207,15 +207,15 @@
       <div class="section-card">
         <h2>Data Sources</h2>
         <ul>
-          <li><strong>Federal income tax brackets:</strong> IRS Revenue Procedure, 2025 tax year</li>
-          <li><strong>Standard deduction:</strong> $15,750 (single), $31,500 (married filing jointly), $25,000 (head of household) — IRS, 2025</li>
-          <li><strong>Social Security tax rate:</strong> 6.2% (employee), wage base $176,100 (2025) — SSA</li>
+          <li><strong>Federal income tax brackets:</strong> IRS Revenue Procedure 2025-32, 2026 tax year</li>
+          <li><strong>Standard deduction:</strong> $16,100 (single), $32,200 (married filing jointly), $24,150 (head of household) — IRS, 2026</li>
+          <li><strong>Social Security tax rate:</strong> 6.2% (employee), wage base $184,500 (2026) — SSA</li>
           <li><strong>Medicare tax rate:</strong> 1.45% (employee), no cap — IRC §3101(b)</li>
           <li><strong>Additional Medicare Tax:</strong> 0.9% above $200,000 (single) / $250,000 (MFJ) — IRC §3101(b)(2)</li>
           <li><strong>Progressive bracket structure:</strong> IRC §1</li>
           <li><strong>Filing status definitions:</strong> IRC §7703</li>
         </ul>
-        <p>These are 2025 federal values and may change after tax law or inflation adjustments.</p>
+        <p>These are 2026 federal values and may change after tax law or inflation adjustments.</p>
       </div>
     </section>
 
